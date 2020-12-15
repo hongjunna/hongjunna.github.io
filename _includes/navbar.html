@@ -1,33 +1,26 @@
-<header class="hyde header">
-  <nav class="hyde navbar-parent">
-    {% assign pages = site.pages | sort:'url' %}
-    <div class="hyde mobile-nav-wrapper">
-      <div class="hyde container">
-        <ul class="hyde mobile-nav">
-          <div class="hyde mobile-nav-row">
-            <a class="hyde mobile-nav-item logo" href="/">ChemistryX</a>
-            <a class="hyde mobile-nav-item close-btn"><i class="fas fa-times"></i></a>
-          </div>
-          {% for p in pages %} {% if p.visible == true %} {% assign url = page.url | split: '/' %}
-          <a class="hyde mobile-nav-item{% if p.url contains url[1] %} active {% endif %}" href="{{ p.url }}">{{ p.title }}</a>
-          {% endif %} {% endfor %}
-        </ul>
-      </div>
-    </div>
-    <div class="hyde container">
-      <ul class="hyde navbar">
-        <li class="hyde nav-item">
-          <a class="hyde nav-logo" href="/">ChemistryX</a>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="{{"/" | relative_url }}">{{ site.title | escape }}</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{"/" | relative_url }}">Home</a>
         </li>
-        <li class="hyde nav-toggler">
-          <a class="hyde nav-toggle-btn"><i class="fas fa-bars"></i></a>
+        <li class="nav-item">
+          <a class="nav-link" href="{{"/about" | relative_url }}">About</a>
         </li>
-        {% for p in pages %} {% if p.visible == true %} {% assign url = page.url | split: '/' %}
-        <li class="hyde nav-item{% if p.url contains url[1] %} active {% endif %}">
-          <a href="{{ p.url }}">{{ p.title }}</a>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ "/posts" | relative_url }}">Posts</a>
         </li>
-        {% endif %} {% endfor %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{"/contact" | relative_url }}">Contact</a>
+        </li>
       </ul>
     </div>
-  </nav>
-</header>
+  </div>
+</nav>

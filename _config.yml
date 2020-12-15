@@ -1,45 +1,19 @@
-title: ChemistryX
-description: >-
-  UI & UX Designer
-  Frontend Developer
-url: "https://imjisu883508.github.io/"
-github: ChemistryX
-email: starpiung@naver.com
-google_analytics: UA-146771648-1
-
-exclude: [README.md, Gemfile, Gemfile.lock]
-
-comment:
-  enabled: true
-  repo: ChemistryX/hyde-comments
-  issue-term: pathname
-  theme: github-light
-
-collections:
-  pages:
-    output: true
-  projects:
-    output: true
-  tags:
-    output: true
-
-defaults:
-  - scope:
-      type: pages
-    values:
-      layout: default
-  - scope:
-      type: posts
-    values:
-      layout: post
-      permalink: /blog/:title
-  - scope:
-      type: projects
-    values:
-      layout: project
-      permalink: /projects/:title
-  - scope:
-      type: tags
-    values:
-      layout: tag
-      permalink: /tags/:title
+title:              imjisu
+email:              imjisu883508@gmail.com
+description:        
+author:             Hongjun Na
+baseurl:            ""
+url:                "https://imjisu883508.github.io/"
+twitter_username:   
+github_username:    imjisu883508
+facebook_username:  
+instagram_username:  
+linkedin_username:
+google_analytics:   UA-XXXXXXXXX-X 
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
