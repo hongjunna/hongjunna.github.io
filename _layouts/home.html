@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-
+<style>
+  @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+</style>
 <!-- Page Header -->
 {% if page.background %}
 <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
@@ -10,14 +12,18 @@ layout: default
     {% endif %}
     <div class="overlay"></div>
     <div class="container">
+      <div class="left">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
-            <h1>Javascript and Androaid Developer<br>Partissier</h1>
+            <p style="font-family: 'Jeju Gothic', sans-serif;">
+            <h1>빵 굽는 개발자<br>Jisu 입니다:)</h1>
             {% if site.description %}
-            <span class="subheading">{{ site.description }}</span>
+            <span class="subheading">Javascript, Androaid Developer<br>and Partissier</span>
             {% endif %}
+            </p>
           </div>
+        </div>
         </div>
       </div>
     </div>
