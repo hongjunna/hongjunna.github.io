@@ -1,4 +1,5 @@
 
+/*about 관련 css*/
 .ID{
     font : 'Jeju Gothic', sans-serif;
 }
@@ -8,6 +9,14 @@
 
 .tittle{
     font : bold 30px 'Jeju Gothic', sans-serif;
+}
+
+.tittle-sub{
+  font : 20px 'Jeju Gothic', sans-serif;
+}
+
+.intro-text{
+  font : 23px 'Jeju Gothic', sans-serif;
 }
 
 .text{
@@ -100,9 +109,21 @@
     border-radius: 15px;
 
 }
+
 .list-tittle{
-    font : bold 25px 'Jeju Gothic', sans-serif;
+    font : bold 23px 'Jeju Gothic', sans-serif;
 }
+
 .list-text{
     font : 15px 'Jeju Gothic', sans-serif;
 }
+
+.list-date{
+  font : bold 15px 'Jeju Gothic', sans-serif;
+}
+
+.right-mini{
+  font :  15px 'Jeju Gothic', sans-serif;
+  float : right;
+}
+

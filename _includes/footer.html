@@ -1,16 +1,20 @@
+<!-- Footer CSS를 불러오거나 추가한 부분 -->
 <style>
   @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
   .class_copy{
     font-size : 10px;
   }
+  a { text-decoration:none } 
 </style>
 
-<!-- Footer -->
-
+<!-- Footer 시작 예고-->
+<link rel="stylesheet" type="text/css" href="assets/mycss/footer.css">
 <hr>
 
+<!-- Footer 시작 -->
 <footer>
-        <ul style="text-align:right ">
+  <ul style="text-align:right ">
+          <!-- 개발자 이메일 부분 --> 
           {% if site.email %}
           <li class="list-inline-item">
             <a href="mailto:{{ site.email | encode_email }}">
@@ -21,6 +25,7 @@
             </a>
           </li>
           {% endif %}
+          <!-- 개발자 깃허브 아이디 부분 --> 
           {% if site.github_username %}
           <li class="list-inline-item">
             <a href="https://github.com/{{ site.github_username }}">
@@ -31,8 +36,9 @@
             </a>
           </li>
           {% endif %}
-        
+          <!-- 카피라이트 부분 --> 
         <p class="copyright text-muted">
+          <p class="made-with">MADE WITH <a href = "https://github.com/imjisu883508/imjisu883508.github.io" target = "blank" ><span class="WIGIT" >WIGIT</span></a>ㅤ</p>
           <p style="font-family: 'Jeju Gothic', sans-serif; text-align:center ">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p></p>
         </ul>
 </footer>
