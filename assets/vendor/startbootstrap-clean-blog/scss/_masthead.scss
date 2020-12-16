@@ -11,7 +11,7 @@ header.masthead {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    height:100%;
     width: 100%;
     background-color: $gray-900;
     opacity: 0.5;
@@ -20,9 +20,9 @@ header.masthead {
   .post-heading,
   .site-heading {
     padding: 200px 0 150px;
-    color: white;
+    color: #FAE1AF;
     @media only screen and (min-width: 768px) {
-      padding: 200px 0;
+      padding: 150px 0;
     }
   }
   .page-heading,
@@ -37,7 +37,7 @@ header.masthead {
       font-weight: 300;
       line-height: 1.1;
       display: block;
-      margin: 10px 0 0;
+      margin: 20px 0 0;
       @include sans-serif-font;
     }
     @media only screen and (min-width: 768px) {
