@@ -11,21 +11,6 @@ form: true
 <!--body 시작-->
 <body>
     <!--JS불러오기-->
-    <script>
-        $('dt').on('click', function () {
-
-function slideDown(target) {
-    slideUp();
-    $(target).addClass('on').next().slideDown();
-}
-
-function slideUp() {
-    $('dt').removeClass('on').next().slideUp();
-};
-$(this).hasClass('on') ? slideUp() : slideDown($(this));
-
-})
-    </script>
 <!--본문시작-->
     <link rel="stylesheet" type="text/css" href="assets/mycss/about.css">
     <p style="text-align:center;">
@@ -35,12 +20,14 @@ $(this).hasClass('on') ? slideUp() : slideDown($(this));
     <p class="tittle">
         📰카드뉴스
 
+        <script src="my_script/portfolio.js">
         <dl>
             <dt><span></span>이게 뭔가요?</dt>
             <dd>나도 몰라...</dd>
             <dt><span></span>질문입니다...</dt>
             <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum maiores.</dd>
         </dl>
+    </script>
     </p>
     
     
