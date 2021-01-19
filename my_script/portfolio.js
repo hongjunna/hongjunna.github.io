@@ -1,5 +1,5 @@
 //아코디언메뉴
-$('dt').on('click', function () {
+$("#test").on('click', function () {
 
     function slideDown(target) {
         slideUp();
