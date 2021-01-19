@@ -6,8 +6,21 @@ background: '/img/bg-contact.jpg'
 form: true
 ---
 <body>
-    <script src="my_script/portfolio.js"></script>
-    
+    <script>
+        function expandAll(){
+    $(".collapsible-header").addClass("active");
+    $(".collapsible").collapsible({accordion: false});
+  }
+  
+  function collapseAll(){
+    $(".collapsible-header").removeClass(function(){
+      return "active";
+    });
+    $(".collapsible").collapsible({accordion: true});
+    $(".collapsible").collapsible({accordion: false});
+  }
+    </script>
+
     <link rel="stylesheet" type="text/css" href="assets/mycss/about.css">
     <p style="text-align:center;">
         <font size="15" face="Jeju Gothic">그래픽(Graphic Design)</font>
