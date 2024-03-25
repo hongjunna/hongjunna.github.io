@@ -1,0 +1,234 @@
+body{
+    margin: 0px;
+}
+button{
+    padding: 10px 20px 10px 20px;
+    background-color: #444445;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+}
+.head-bg{
+    box-sizing: border-box;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    background: linear-gradient(#4997dc, #475abf);
+    padding: 80px 100px 0px 100px;
+}
+.head-bg-lt{
+    color: white;
+}
+.head-bg-lt h1,p{
+    margin: 0px;
+    padding-bottom: 20px;
+}
+.head-bg-md{
+    flex-grow: 1;
+}
+.head-bg-rt{
+    margin-top: 20px;
+}
+.head-bg-rt img{
+    width: 367px;
+    height: 400px;
+}
+.mid-bg{
+    padding-top: 50px;
+    padding-bottom: 70px;
+    text-align: center;
+    margin: auto;
+}
+.mid-bg p{
+    padding-bottom: 20px;
+}
+.bottom-bg{
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(#4f61c1,#4f61c1);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    text-align: center;
+}
+.bottom-bg h3,p{
+    margin: 0px;
+}
+.bottom-bg-title{
+    padding-bottom: 40px;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+}
+.icon{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.icon h3{
+    margin: 10px;
+}
+.icon-box{
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    color: #4f61c1;
+    background-color: white;
+    border-radius: 100%;
+    padding: 30px;
+    margin: auto;
+}
+.content{
+    width: 100%;
+    padding-top: 20px;
+}
+.content p,h3{
+    margin: 0px;
+    text-align: center;
+}
+.portfolio-box{
+    margin: auto;
+    max-width: 950px;
+    width: 80%;
+    height: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio-content{
+    width: 40%;
+    height: 180px;
+    padding: 40px;
+    background-size: cover;
+}
+.bg1{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url("https://codingapple.com/wp-content/uploads/2019/06/portfolio-1.jpg");
+}
+.bg2{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url("https://codingapple.com/wp-content/uploads/2019/06/portfolio-2.jpg");
+}
+.bg3{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url("https://codingapple.com/wp-content/uploads/2019/06/portfolio-3.jpg");
+}
+.bg4{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url("https://codingapple.com/wp-content/uploads/2019/06/portfolio-4.jpg");
+}
+.portfolio-content p{
+    text-align: start;
+    color: white;
+}
+.content-title{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+footer{
+    padding: 50px;
+    text-align: center;
+}
+.footer-icons{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.footer-icon-box{
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    color: white;
+    background-color: #4f61c1;
+    border-radius: 100%;
+    padding: 15px;
+    margin: 10px;
+}
+
+@media (max-width:940px){
+    .head-bg{
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background: linear-gradient(#4997dc, #475abf);
+        padding: 80px 100px 0px 100px;
+        text-align: center;
+    }
+    .head-bg-lt{
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .head-bg-rt{
+        height: 100%;
+    }
+    .head-bg-md{
+        flex-grow: 0;
+    }
+    .mid-bg{
+        margin: 0px 20px 0px 20px;
+    }
+    .icons{
+        margin: auto;
+        max-width: 400px ;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .bottom-bg{
+        height: 100%;
+    }
+    .portfolio-box{
+        margin: auto;
+        width: 314px;
+    }
+    .portfolio-content{
+        width: 100%;
+    }
+    .content h3{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width:940px){
+    .head-bg{
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background: linear-gradient(#4997dc, #475abf);
+        padding: 70px 20px 0px 20px;
+        text-align: center;
+    }
+    .head-bg-rt{
+        height: 100%;
+    }
+    .bottom-bg-subtitle{
+        font-size: 15px ;
+        padding-bottom: 0px;
+    }
+    .bottom-bg-title{
+        font-size: 30px ;
+    }
+    .icons{
+        max-width: 200px;
+    }
+    .icon{
+        margin-bottom: 20px;
+    }
+    .portfolio-box{
+        width: 90%;
+    }
+    .portfolio-content{
+        padding: 30px;
+    }
+    .content-title{
+        font-size: 25px;
+    }
+}
