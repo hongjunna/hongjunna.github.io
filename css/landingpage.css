@@ -64,6 +64,7 @@ button{
 }
 .bottom-bg-title{
     padding-bottom: 40px;
+    font-size: 28px;
 }
 .icons{
     display: flex;
@@ -182,10 +183,14 @@ footer{
     }
     .icons{
         margin: auto;
-        max-width: 400px ;
+        max-width: 500px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+    }
+    .icon{
+        width: 200px;
+        margin: 20px;
     }
     .bottom-bg{
         height: 100%;
@@ -201,7 +206,7 @@ footer{
         margin-bottom: 20px;
     }
 }
-@media (max-width:940px){
+@media (max-width:500px){
     .head-bg{
         box-sizing: border-box;
         width: 100%;
