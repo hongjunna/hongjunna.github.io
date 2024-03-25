@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./PretendardVariable.ttf');
+}
+@font-face {
+    font-family: 'WAGURITTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    margin: 0px;
+    font-family: 'Pretendard';
+}
+.page{
+    padding: 40px 100px 50px 100px;
+}
+title{
+    width: 100%;
+}
+.title h1{
+    margin: 0px;
+    font-family: "WAGURITTF";
+    font-weight: 100;
+    font-size: 30px;
+}
+.구분선{
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: white;
+}
+.content-header{
+    display: flex;
+    align-items: end;
+}
+.content-tag{
+    font-size: 14px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px ;
+    color: white;
+    margin-right: 10px ;
+}
+.content-title h2{
+    margin: 10px 0px 8px 0px;
+    font-size: 25px;
+}
+.content-title p{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.content-footer{
+    display: flex;
+    justify-content: end;
+}
+.content-footer button{
+    font-size: 14px;
+    background-color: black;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px ;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.content-pictures{
+    display: flex;
+}
+.content-pic{
+    box-sizing: border-box;
+    width: 49%;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.content-footer{
+    margin-top: 20px;
+}
+.fx-gw{
+    flex-grow: 1;
+}
+
+footer{
+    background-color: rgba(0, 0, 0, 0.9);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 50px;
+    color: rgb(200, 200, 200);
+}
+
+footer h2{
+    margin: 0px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-family: "WAGURITTF";
+    font-weight: 100;
+}
+footer p{
+    margin: 0px;
+    font-size: 14px;
+    padding-bottom: 5px ;
+}
+.copyright{
+    padding-top: 20px ;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width:1000px) {
+    .page{
+        padding: 40px 50px 50px 50px;
+    }
+}
+
+@media (max-width:768px) {
+    .content-pictures{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .fx-gw{
+        flex-grow: 0;
+    }
+    .content-pic{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:500px){
+    .page{
+        padding: 40px 30px 50px 30px;
+    }
+    .content-header{
+        flex-wrap: wrap;
+    }
+    .date{
+        width: 100%;
+        margin-top: 10px;
+    }
+    footer{
+        padding: 20px;
+    }
+}
