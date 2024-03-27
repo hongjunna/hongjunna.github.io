@@ -51,6 +51,10 @@
 <script>
         // KakaoWork API를 호출하여 메시지를 전송하는 함수
         function sendMessage() {
+
+
+
+
         var YOUR_APP_KEY = '7e269602.d8c9331e64eb46dea67a87d958771791';
         var recipientEmail = 'jun@junlab.xyz';
         var messageText = '테스트 블록입니다';
@@ -82,7 +86,9 @@
         $('.msg-content').html(msgtext);
     });
     $('#send-bt').on('click',function(){
-        sendMessage();
+        sendmsg();
+
+        // sendMessage();
         // const sendData = {"text": "블록킷 메시지입니다.","blocks": [{"type": "header","text": "테스트 블록입니다","style": "white"},{"type": "text","text": "text sample","inlines": [{"type": "styled","text": "이곳에 텍스트를 입력합니다.\n필요에 따라 이런식으로 줄바꿈 처리를 할 수도 있습니다."}]},{"type": "button","text": "복사하기","style": "default","action": {"type": "open_system_browser","name": "button1","value": "https://page.junlab.xyz"}}]};
         // $.ajax({
 		// 	type:'post',   //post 방식으로 전송
@@ -106,5 +112,6 @@
     //     xhr.send(JSON.stringify(data)); //JSON.stringify를 통해 오브젝트 데이터를 문자열 형태로 변경해서 전송해야 함.
     })
 </script>
+<script type="text/javascript" src="index.js"></script> 
 </body>
 </html>
