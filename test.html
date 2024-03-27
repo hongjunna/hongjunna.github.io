@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/index.css" rel="stylesheet">
+    <title>Light UP 카카오워크 공지 시스템</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img class="logo-img" src="assets/img/lightupLogo.jpeg">
+        <h1 class="main-title">Light UP 카카오워크 공지 전송 시스템</h1>
+    </header>
+    <div class="contents">
+        <div class="contents-lt">
+            <div class="contents-section">
+                <h2>1. 어디로 전송할까요?</h2>
+                <button class="text-bt">단체공지방</button>
+            </div>
+            <div class="contents-section">
+                <h2>2. 제목을 적어주세요</h2>
+                <input class="text-field">
+            </div>
+            <div class="contents-section">
+                <h2>3. 전송하실 내용을 적어주세요</h2>
+                <p>Enter 키 효과를 주고 싶다면 \n 을 추가해 보세요</p>
+                <textarea class="text-textarea"></textarea>
+            </div>
+            <div class="contents-section">
+                <h2>4. 내용 전송하기</h2>
+                <button id="send-bt" class="text-bt bt-left">전송하기</button>
+            </div>
+        </div>
+        <div class="contents-rt">
+            <div class="contents-section">
+                <h2>✅ 전송될 메시지 미리보기</h2>
+            </div>
+            <div class="preview">
+                <div class="profileimg">
+                    <img class="logo-img" src="assets/img/lightupLogo.jpeg">
+                </div>
+                <div class="msgcontent">
+                    <p class="profile-name">공지사항 집배원</p>
+                    <div class="msg-title">이곳에 제목이 들어가요</div>
+                    <div class="msg-content">왼쪽에서 내용을 입력하면 미리볼 수 있어요.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+        // KakaoWork API를 호출하여 메시지를 전송하는 함수
+        function sendMessage() {
+        var YOUR_APP_KEY = '7e269602.d8c9331e64eb46dea67a87d958771791';
+        var recipientEmail = 'jun@junlab.xyz';
+        var messageText = '테스트 블록입니다';
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://api.kakaowork.com/v1/messages.send_by_email');
+        xhr.setRequestHeader('Authorization', 'Bearer ' + YOUR_APP_KEY);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    alert('메시지가 성공적으로 전송되었습니다.');
+                } else {
+                    alert('메시지 전송 중 오류가 발생했습니다.');
+                }
+            }
+        };
+        var data = JSON.stringify({
+            email: recipientEmail,
+            text: messageText
+        });
+        xhr.send(data);
+    }
+     $('.text-field').on("blur", function () {
+        $('.msg-title').html($('.text-field').val());
+    });
+    $('.text-textarea').on("blur", function () {
+        var msgtext = $('.text-textarea').val().replace('\\n', "<br />");
+        $('.msg-content').html(msgtext);
+    });
+    $('#send-bt').on('click',function(){
+        sendMessage();
+        // const sendData = {"text": "블록킷 메시지입니다.","blocks": [{"type": "header","text": "테스트 블록입니다","style": "white"},{"type": "text","text": "text sample","inlines": [{"type": "styled","text": "이곳에 텍스트를 입력합니다.\n필요에 따라 이런식으로 줄바꿈 처리를 할 수도 있습니다."}]},{"type": "button","text": "복사하기","style": "default","action": {"type": "open_system_browser","name": "button1","value": "https://page.junlab.xyz"}}]};
+        // $.ajax({
+		// 	type:'post',   //post 방식으로 전송
+		// 	url:'https://api.kakaowork.com/v1/messages.send_by_email?email=jun@junlab.xyz&text=안녕하세요!',   //데이터를 주고받을 파일 주소
+		// 	headers : {
+        //     "Content-Type" : "application/json",
+        //     Authorization : "7e269602.d8c9331e64eb46dea67a87d958771791"
+        //     },
+        //     data:sendData,   //위의 변수에 담긴 데이터를 전송해준다.
+		// 	dataType:'html',   //html 파일 형식으로 값을 담아온다.
+		// 	success : function(data){   //파일 주고받기가 성공했을 경우. data 변수 안에 값을 담아온다.
+		// 		console.log(data)
+		// 	}
+		// });
+
+    //     const xhr = new XMLHttpRequest(); //XMLHttpRequest 객체 생성
+    //     xhr.open("POST", "https://api.kakaowork.com/v1/messages.send_by_email?email=jun@junlab.xyz&text=안녕하세요!"); //HTTP Method, URL 정의
+    //     //xhr.setRequestHeader("content-type", "application/json"); //헤더 값 중 content-type 정의
+    //     xhr.setRequestHeader("Authorization", "7e269602.d8c9331e64eb46dea67a87d958771791"); //헤더 값 중 content-type 정의
+    //     const data = {"text": "블록킷 메시지입니다.","blocks": [{"type": "header","text": "테스트 블록입니다","style": "white"},{"type": "text","text": "text sample","inlines": [{"type": "styled","text": "이곳에 텍스트를 입력합니다.\n필요에 따라 이런식으로 줄바꿈 처리를 할 수도 있습니다."}]},{"type": "button","text": "복사하기","style": "default","action": {"type": "open_system_browser","name": "button1","value": "https://page.junlab.xyz"}}]};
+    //     xhr.send(JSON.stringify(data)); //JSON.stringify를 통해 오브젝트 데이터를 문자열 형태로 변경해서 전송해야 함.
+    })
+</script>
+</body>
+</html>
